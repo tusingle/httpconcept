@@ -6,7 +6,7 @@ import AddUser from './component/AddUser/AddUser'
 
 
 function App() {
-  let userData: any = [];
+  let userData = [];
   const [users, setUsers] = useState([])
 
   const getAllUserAxios = () => { 
@@ -36,7 +36,7 @@ function App() {
 
   console.log('userData', userData)
   console.log('users', users)
-const allUsersHTML = users.map((user: any, index) => {
+const allUsersHTML = users.map((user, index) => {
   return (
     <p key={user.id}>
       User-{index} := {user.email}
